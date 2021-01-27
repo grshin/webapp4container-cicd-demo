@@ -13,8 +13,8 @@ spec:
         app: aks-k8s-app
     spec:
       containers:
-        - name: wa4c-demo
-          image: acrgrshin.azurecr.io/wa4container-tag:latest
+        - name: wa4container
+          image: acrtest1024.azurecr.io/wa4container-tag:latest
           ports:
             - containerPort: 80
 ---

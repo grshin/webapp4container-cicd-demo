@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aksk8sapp-deploy
+  name: aksk8sapp-dep
 spec:
   replicas: 2
   selector:
@@ -13,7 +13,7 @@ spec:
         app: aks-k8s-app
     spec:
       containers:
-        - name: wa4container-app
+        - name: wa4container
           image: acrgrshindemo.azurecr.io/wa4container-tag:latest
           ports:
             - containerPort: 80

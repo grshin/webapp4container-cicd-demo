@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aksk8sapp-dep
+  name: aksk8s-dep
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: aks-k8s-app
+      app: aksk8s
   template:
     metadata:
       labels:
-        app: aks-k8s-app
+        app: aksk8s
     spec:
       containers:
         - name: wa4container
@@ -21,12 +21,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-    name: aks-k8s-app
+    name: aksk8s-svc
 spec:
   ports:
     - name: http-port
       port: 80
       targetPort: 80
   selector:
-    app: aks-k8s-app
+    app: aksk8s
   type: LoadBalancer
